@@ -179,6 +179,7 @@ https://www.elastic.co/guide/en/beats/filebeat/current/how-filebeat-works.html
 
 # Questions
 * How harverster works on code level???
+** Filebeat was implemented with Go... :(
 
 
 
