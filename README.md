@@ -143,6 +143,36 @@ vanryuji@instance-4:/$ curl -X GET "localhost:9200/filebeat-7.0.0-2019.04.11-000
 
 ```
 
+### 3. Continue to read on restarting a Filebeat
+#### 1) Restart a Filebeat without making a new login
+Before stopping a Filebeat
+```shell
+vanryuji@instance-4:~/web_log_with_elastic_stack/filebeat-7.0.0-linux-x86_64$ curl -X GET "localhost:9200/_cat/indices?v"
+health status index                            uuid                   pri rep docs.count docs.deleted store.size pri.store.size
+yellow open   filebeat-7.0.0-2019.04.11-000001 Iu4G-mflQWSWfoVC4jOT9g   1   1        232            0    229.6kb        229.6kb
+```
+After starting a Filebeat
+```shell
+vanryuji@instance-4:~/web_log_with_elastic_stack/filebeat-7.0.0-linux-x86_64$ curl -X GET "localhost:9200/_cat/indices?v"
+health status index                            uuid                   pri rep docs.count docs.deleted store.size pri.store.size
+yellow open   filebeat-7.0.0-2019.04.11-000001 Iu4G-mflQWSWfoVC4jOT9g   1   1        232            0    229.6kb        229.6kb
+```
+
+#### 2) Restart a Filebeat with making a new login
+Before stopping a Filebeat
+```shell
+vanryuji@instance-4:~/web_log_with_elastic_stack/filebeat-7.0.0-linux-x86_64$ curl -X GET "localhost:9200/_cat/indices?v"
+health status index                            uuid                   pri rep docs.count docs.deleted store.size pri.store.size
+yellow open   filebeat-7.0.0-2019.04.11-000001 Iu4G-mflQWSWfoVC4jOT9g   1   1        232            0    229.6kb        229.6kb
+```
+Make a new login before starting a Filebeat
+```shell
+vanryuji@instance-4:~/web_log_with_elastic_stack/filebeat-7.0.0-linux-x86_64$ curl -X GET "localhost:9200/_cat/indices?v"
+health status index                            uuid                   pri rep docs.count docs.deleted store.size pri.store.size
+yellow open   filebeat-7.0.0-2019.04.11-000001 Iu4G-mflQWSWfoVC4jOT9g   1   1        239            0    117.6kb        117.6kb
+```
+
+
 
 # How Filebeat works??
 https://www.elastic.co/guide/en/beats/filebeat/current/how-filebeat-works.html
