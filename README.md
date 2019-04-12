@@ -38,7 +38,7 @@ output.elasticsearch:
 ```
 Run Filebeat!!!
   
-##### 2) Check log in Elasticsearch
+#### 2) Check log in Elasticsearch
 A new index was created, called 'filebeat-7.0.0-2019.04.11-000001'<br>
 There are 187 of docs created by auth.log
 ```shell
