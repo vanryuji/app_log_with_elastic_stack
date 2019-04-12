@@ -4,10 +4,10 @@
 * Filebeat : 7.0
 
 # Install and run
-### Elasticsearch
+### 1. Elasticsearch
 https://www.elastic.co/guide/en/elasticsearch/reference/current/getting-started-install.html
 
-### Filebeat
+### 2. Filebeat
 https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-installation.html
 
 
@@ -17,12 +17,12 @@ https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-installation.htm
 # Elasticsearch + Filebeat
 In this section, Filebeat reads the /var/log/auth.log and sends it to Elasticsearch
 
-### Architecture
+### 1. Architecture
 
 
-### Send auth.log to Elasticsearch
+### 2. Send auth.log to Elasticsearch
 Before running Filebeat, install and run Elasticsearch
-##### Configure input/output
+##### 1) Configure input/output
 ```shell
 # <Filebeat home>/filebeat.yml
 
@@ -38,7 +38,7 @@ output.elasticsearch:
 ```
 Run Filebeat!!!
   
-##### Check log in Elasticsearch
+##### 2) Check log in Elasticsearch
 A new index was created, called 'filebeat-7.0.0-2019.04.11-000001'
 There are 187 of docs created by auth.log
 ```shell
