@@ -56,6 +56,26 @@ health status index                            uuid                   pri rep do
 yellow open   filebeat-7.0.0-2019.04.11-000001 Iu4G-mflQWSWfoVC4jOT9g   1   1        219            0    139.6kb        139.6kb
 ```
 
+Origin /var/log/auth.log is
+```shell
+Apr  4 08:56:13 instance-4 useradd[773]: new group: name=ubuntu, GID=1000
+Apr  4 08:56:13 instance-4 useradd[773]: new user: name=ubuntu, UID=1000, GID=1000, home=/home/ubuntu, shell=/bin/bash
+Apr  4 08:56:13 instance-4 useradd[773]: add 'ubuntu' to group 'adm'
+Apr  4 08:56:13 instance-4 useradd[773]: add 'ubuntu' to group 'dialout'
+Apr  4 08:56:13 instance-4 useradd[773]: add 'ubuntu' to group 'cdrom'
+Apr  4 08:56:13 instance-4 useradd[773]: add 'ubuntu' to group 'floppy'
+Apr  4 08:56:13 instance-4 useradd[773]: add 'ubuntu' to group 'sudo'
+Apr  4 08:56:13 instance-4 useradd[773]: add 'ubuntu' to group 'audio'
+Apr  4 08:56:13 instance-4 useradd[773]: add 'ubuntu' to group 'dip'
+Apr  4 08:56:13 instance-4 useradd[773]: add 'ubuntu' to group 'video'
+Apr  4 08:56:13 instance-4 useradd[773]: add 'ubuntu' to group 'plugdev'
+Apr  4 08:56:13 instance-4 useradd[773]: add 'ubuntu' to group 'lxd'
+Apr  4 08:56:13 instance-4 useradd[773]: add 'ubuntu' to group 'netdev'
+Apr  4 08:56:13 instance-4 useradd[773]: add 'ubuntu' to shadow group 'adm'
+Apr  4 08:56:13 instance-4 useradd[773]: add 'ubuntu' to shadow group 'dialout'
+...
+```
+
 And the document format is
 ```shell
 vanryuji@instance-4:/$ curl -X GET "localhost:9200/filebeat-7.0.0-2019.04.11-000001/_doc/7O2jC2oBvjQS0ByQeiOY?pretty"
