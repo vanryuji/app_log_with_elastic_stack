@@ -22,7 +22,7 @@ In this section, Filebeat reads the /var/log/auth.log and sends it to Elasticsea
 
 ### 2. Send auth.log to Elasticsearch
 Before running Filebeat, install and run Elasticsearch
-##### 1) Configure input/output
+##### 1) Configure Filebeat input/output
 ```shell
 # <Filebeat home>/filebeat.yml
 
@@ -39,7 +39,7 @@ output.elasticsearch:
 Run Filebeat!!!
   
 ##### 2) Check log in Elasticsearch
-A new index was created, called 'filebeat-7.0.0-2019.04.11-000001'
+A new index was created, called 'filebeat-7.0.0-2019.04.11-000001'<br>
 There are 187 of docs created by auth.log
 ```shell
 vanryuji@instance-4:/$ curl -X GET "localhost:9200/_cat/indices?v"
@@ -47,7 +47,7 @@ health status index                            uuid                   pri rep do
 yellow open   filebeat-7.0.0-2019.04.11-000001 Iu4G-mflQWSWfoVC4jOT9g   1   1        187            0      117kb          117kb
 ```
 
-If you login to your server, the count of docs will be increase
+If you make a new login to your server, the count of docs will be increase
 ```shell
 # After new login
 
