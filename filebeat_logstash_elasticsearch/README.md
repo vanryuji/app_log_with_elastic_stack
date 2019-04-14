@@ -22,7 +22,7 @@ Logstash filters the input data according to filter section in pipleline.conf
 At the end, Logstash sends data to Elasticsearch
 
 ### 1. Architecture
-![alt text](../img/architecture.png)
+![alt text](architecture.png)
 
 ### 2. Send auth.log from Logstash to Logstash
 Before running Logstash, install and run Elasticsearch
