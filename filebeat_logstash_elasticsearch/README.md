@@ -2,6 +2,7 @@
 * Ubuntu : 18.04
 * Elasticsearch : 7.0
 * Filebeat : 7.0
+* Logstash : 7.0
 
 # Install and run
 ### 1. Elasticsearch
@@ -10,21 +11,24 @@ https://www.elastic.co/guide/en/elasticsearch/reference/current/getting-started-
 ### 2. Filebeat
 https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-installation.html
 
+### 3. Logstash
+https://www.elastic.co/guide/en/logstash/current/installing-logstash.html
 
 
 
-
-# Elasticsearch + Filebeat
-In this section, Filebeat reads the /var/log/auth.log and sends it to Elasticsearch
+# Elasticsearch + Filebeat + Logstash
+In this section, Filebeat reads the /var/log/auth.log and sends it to Logstash
+Logstash filters the input data according to filter section in pipleline.conf
+At the end, Logstash sends data to Elasticsearch
 
 ### 1. Architecture
 ![alt text](../img/architecture.png)
 
-### 2. Send auth.log to Elasticsearch
-Before running Filebeat, install and run Elasticsearch
-#### 1) Configure Filebeat input/output
+### 2. Send auth.log from Logstash to Logstash
+Before running Logstash, install and run Elasticsearch
+#### 1) Configure Logstash input/filter/output
 ```shell
-# <Filebeat home>/filebeat.yml
+# <Logstash home>/filebeat.yml
 
 filebeat.inputs:
 - type: log
