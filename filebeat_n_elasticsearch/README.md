@@ -18,7 +18,7 @@ https://www.elastic.co/guide/en/beats/filebeat/current/filebeat-installation.htm
 In this section, Filebeat reads the /var/log/auth.log and sends it to Elasticsearch
 
 ### 1. Architecture
-![alt text](img/architecture.png)
+![alt text](../img/architecture.png)
 
 ### 2. Send auth.log to Elasticsearch
 Before running Filebeat, install and run Elasticsearch
