@@ -17,9 +17,9 @@ https://www.elastic.co/guide/en/logstash/current/installing-logstash.html
 
 
 # Elasticsearch + Filebeat + Logstash
-In this section, Filebeat reads the /var/log/auth.log and sends it to Logstash
-Logstash filters the input data according to filter section in pipleline.conf
-At the end, Logstash sends data to Elasticsearch
+In this section, Filebeat reads the /var/log/auth.log and sends it to Logstash<br>
+Logstash filters the input data according to filter section in pipleline.conf<br>
+At the end, Logstash sends data to Elasticsearch<br>
 
 ### 1. Architecture
 ![alt text](architecture.png)
