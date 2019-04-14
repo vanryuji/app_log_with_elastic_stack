@@ -24,7 +24,7 @@ In this section, Filebeat reads the /var/log/auth.log and sends it to Elasticsea
 Before running Filebeat, install and run Elasticsearch
 #### 1) Configure Filebeat input/output
 ```shell
-# <Filebeat home>/filebeat.yml
+# <Filebeat home>/my_filebeat.yml
 
 filebeat.inputs:
 - type: log
